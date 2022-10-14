@@ -69,6 +69,9 @@ def montar_pizza(dict_ingredientes: dict[str, dict[str,float]]) -> float:
 
     Returns:
         float: preço da pizza
+    >>> dict_ingredientes = {"massa": {"branca":2}, "molho":{"bolo":3, "calda":5}}
+    >>> montar_pizza(dict_ingredientes)
+    10
     """
     preco = 0
     for tipo in dict_ingredientes:
@@ -77,4 +80,8 @@ def montar_pizza(dict_ingredientes: dict[str, dict[str,float]]) -> float:
     print('dicionário de ingredientes utilizados: ',dict_ingredientes)
     print('-'*42)
     return preco
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
 #teste = {"massa": {"trigo": 4.0, "vagem": 4.0}, "molho": {"tomate": 5.0}, "queijo": {"musarela": 6.0}, "cobertura": {"milho": 4.0}}
