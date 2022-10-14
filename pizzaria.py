@@ -5,6 +5,13 @@ def list_ingredientes(dict_ingredientes: dict[str, dict[str, float]], list_tipos
         dict_ingredientes (dict[str, dict[str, float]]): Um dicionario que tem como chave
         o tipo do ingrediente e como item dicionário que contém como chave o nome do ingrediente e como item o preço
         list_tipos (list[str], optional): lista dos tipos de ingredientes a serem listados. Deve ser do tipo "massa", "molho", "queijo" ou "cobertura". Defaults to ["massa", "molho", "queijo", "cobertura"].
+
+    >>> dict_ingredientes = {"massa": {"trigo": 4.0, "vagem": 4.0}, "molho": {"tomate": 5.0}, "queijo": {"musarela": 6.0}, "cobertura": {"milho": 4.0}}
+    >>> list_ingredientes(dict_ingredientes)
+    massa :  {'trigo': 4.0, 'vagem': 4.0}
+    molho :  {'tomate': 5.0}
+    queijo :  {'musarela': 6.0}
+    cobertura :  {'milho': 4.0}
     """
     for tipo in list_tipos:
         print(tipo,": ", dict_ingredientes[tipo])
