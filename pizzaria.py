@@ -42,3 +42,5 @@ def montar_pizza(dict_ingredientes: dict[str, dict[str,float]]) -> float:
     Returns:
         float: preço da pizza
     """    
+
+#teste = {"massa": {"trigo": 4.0, "vagem": 4.0}, "molho": {"tomate": 5.0}, "queijo": {"musarela": 6.0}, "cobertura": {"milho": 4.0}}
