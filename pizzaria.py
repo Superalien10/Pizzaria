@@ -6,13 +6,15 @@ def list_ingredientes(dict_ingredientes: dict[str, dict[str, float]], list_tipos
         o tipo do ingrediente e como item dicionÃ¡rio que contÃ©m como chave o nome do ingrediente e como item o preÃ§o
         list_tipos (list[str], optional): lista dos tipos de ingredientes a serem listados. Deve ser do tipo "massa", "molho", "queijo" ou "cobertura". Defaults to ["massa", "molho", "queijo", "cobertura"].
     """
+    for tipo in list_tipos:
+        print(tipo,": ", dict_ingredientes[tipo])
 
 def remover_ingrediente(ingrediente: str, dict_ingredientes: dict[str, dict[str,float]])-> dict[str, dict[str,float]]:
-    """Remove um ingrediente dicionário de ingredientes cadastrados.
+    """Remove um ingrediente dicionï¿½rio de ingredientes cadastrados.
     Args:
         ingrediente (str): nome do ingrediente a ser adicionado.
         dict_ingredientes (dict[str, dict[str,float]]): Um dicionario que tem como chave
-        o tipo do ingrediente e como item dicionário que contém como chave o nome do ingrediente e como item o preço.
+        o tipo do ingrediente e como item dicionï¿½rio que contï¿½m como chave o nome do ingrediente e como item o preï¿½o.
     Returns:
         dict[str, dict[str,float]]: dicionario com o ingrediente removido
      
