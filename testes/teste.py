@@ -1,6 +1,6 @@
 import sys
 
-import contrato
+import pizzza
 import unittest
 from datetime import date
 from unittest.mock import Mock
@@ -22,6 +22,7 @@ class TestModuloQualidade(unittest.TestCase):
         print('\nExecutando setUpClass')
     def tearDown(self):
         print('\nExecutando tearDownMethod')
-
+    def test_case_pizza_calabresa(self):
+        print('Teste de montar pizza de calabresa')
 if __name__ == '__main__':
     unittest.main(verbosity=2)
