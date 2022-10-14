@@ -1,5 +1,9 @@
 import sys
 
+sys.path.insert(0, "../src")
+
+import modulo_qualidade as mq
+
 import pizzza
 import unittest
 from datetime import date
@@ -24,5 +28,10 @@ class TestModuloQualidade(unittest.TestCase):
         print('\nExecutando tearDownMethod')
     def test_case_pizza_calabresa(self):
         print('Teste de montar pizza de calabresa')
+    
+    def test_case_comum(self):
+        print("Executando Caso de Teste: Comum")
+        self.assertEqual( remover_ingrediente("cobertura", "pepperoni"), {'massa': {'trigo': 19.34}, 'molho': {'tomate': 5}, 'cobertura': {}, 'queijo': {'gorgonzola': 2}})
+        
 if __name__ == '__main__':
     unittest.main(verbosity=2)
