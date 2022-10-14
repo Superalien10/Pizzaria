@@ -8,16 +8,28 @@ def list_ingredientes(dict_ingredientes: dict[str, dict[str, float]], list_tipos
     """
 
 def remover_ingrediente(ingrediente: str, dict_ingredientes: dict[str, dict[str,float]])-> dict[str, dict[str,float]]:
-    """Remove um ingrediente dicion√°rio de ingredientes cadastrados.
-
+    """Remove um ingrediente dicion·rio de ingredientes cadastrados.
     Args:
         ingrediente (str): nome do ingrediente a ser adicionado.
         dict_ingredientes (dict[str, dict[str,float]]): Um dicionario que tem como chave
-        o tipo do ingrediente e como item dicion√°rio que cont√©m como chave o nome do ingrediente e como item o pre√ßo.
-
+        o tipo do ingrediente e como item dicion·rio que contÈm como chave o nome do ingrediente e como item o preÁo.
     Returns:
         dict[str, dict[str,float]]: dicionario com o ingrediente removido
+     
+    >>> dict_ingredientes = {"massa": {"branca":2}, "molho":{"bolo":3, "calda":5}}
+    >>> remover_ingrediente("bolo", dict_ingredientes
+    {'massa': {'branca': 2}, 'molho': {'calda': 5}}
+    >>> dict_ingredientes = {"massa": {"branca":2}, "molho":{"bolo":3, "calda":5}}
+    >>> remover_ingrediente("jujuba", dict_ingredientes
+     {"massa": {"branca":2}, "molho":{"bolo":3, "calda":5}}
     """
+    for tipo in list(dict_ingredientes):
+        for estocado in list(dict_ingredientes[tipo]):
+            if ingrediente == estocado:
+                aqui=dict_ingredientes[tipo]
+                aqui.pop(ingrediente)
+    return dict_ingredientes
+
 def add_ingrediente(ingrediente: str, preco: float, tipo: str, dict_ingredientes: dict[str, dict[str,float]] = None) -> dict[str, dict[str,float]]:
     """recebe um dicion√°rio de ingredientes e adiciona um novo ingrediente de um determinado tipo. Imprime o ingrediente, o tipo e o pre√ßo
 
