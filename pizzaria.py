@@ -17,11 +17,11 @@ def remover_ingrediente(ingrediente: str, dict_ingredientes: dict[str, dict[str,
         dict[str, dict[str,float]]: dicionario com o ingrediente removido
      
     >>> dict_ingredientes = {"massa": {"branca":2}, "molho":{"bolo":3, "calda":5}}
-    >>> remover_ingrediente("bolo", dict_ingredientes
+    >>> remover_ingrediente("bolo", dict_ingredientes)
     {'massa': {'branca': 2}, 'molho': {'calda': 5}}
     >>> dict_ingredientes = {"massa": {"branca":2}, "molho":{"bolo":3, "calda":5}}
-    >>> remover_ingrediente("jujuba", dict_ingredientes
-     {"massa": {"branca":2}, "molho":{"bolo":3, "calda":5}}
+    >>> remover_ingrediente("jujuba", dict_ingredientes)
+    {'massa': {'branca': 2}, 'molho': {'bolo': 3, 'calda': 5}}
     """
     for tipo in list(dict_ingredientes):
         for estocado in list(dict_ingredientes[tipo]):
